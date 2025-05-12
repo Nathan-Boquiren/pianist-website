@@ -1,8 +1,8 @@
 <h1 align="center">🎹 Piano Arranger & Composer Website 🎹</h1>
 
-A clean, elegant, and masculine personal website for showcasing your piano arrangements and compositions. Built as a static site with HTML, CSS, and JavaScript, and designed for easy hosting on GitHub Pages.
+A clean personal website for showcasing piano arrangements and compositions. Built as a static site with HTML, CSS, and JavaScript, and designed for easy hosting on GitHub Pages. Specifically made for myself...
 
-# 🔹 Features
+# 👉 Features
 
 - **Home Page**
 - **About Page**
@@ -20,6 +20,7 @@ A clean, elegant, and masculine personal website for showcasing your piano arran
 - **Layout & Feel:**
   - Cool, muted tones
   - Minimal, uncluttered design
+  - Possible dark mode based on user device preferences
   - Responsive for desktop and mobile
 
 # 🛠️ Tech Stack
