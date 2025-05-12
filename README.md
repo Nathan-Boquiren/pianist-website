@@ -34,7 +34,7 @@ A clean personal website for showcasing piano arrangements and compositions. Bui
 
 Email: nathanjboquiren@gmail.com
 
-[Nathan J. Boquiren on YouTube](www.youtube.com/@nathanjboquiren)
+[Nathan J. Boquiren on YouTube](https://youtube.com/@nathanjboquiren)
 
 [Nathan J. Boquiren on SoundCloud](https://soundcloud.com/nathanjboqurien)
 
