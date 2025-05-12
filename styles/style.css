@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ===== CSS RESET ===== */
+
+:root {
+    --primary-clr: #607d8b;
+    --primary-dark: #37474f;
+    --primary-light: #90a4ae;
+    --secondary-clr: #D2b48c;
+    --secondary-dark: #bfa074;
+    --secondary-light: #F5DEB3;
+    --dark-clr: #212121;
+    --light-clr: #f5f5f5;
+
+    --fg: var(--dark-clr);
+    --bg: var(--light-clr);
+
+    --primary-font: 'Cormorant Garamond', serif;
+    --secondary-font: 'Inter', sans-serif;
+}
+/* Dark Mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --fg: var(--light-clr);
+    --bg: var(--dark-clr);
+  }
+} */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+
+/* Typography */
+
+p, h1, h2, h3, h4, h5, h6, li, a {
+    color: var(--fg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);   
+}
+
+p, li, a {
+    font-family: var(--secondary-font);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    margin-right: auto;
+}
+
+#logo-img {
+    width: 4rem;
+    height: auto;
+}
+
+#logo-img path {
+    fill: var(--fg);
+}
+
+nav ul, header .logo {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+}
