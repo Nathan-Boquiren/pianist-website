@@ -75,13 +75,17 @@ header {
     margin-right: auto;
     cursor: pointer;
 }
+
 #logo-img {
     width: 4rem;
     height: auto;
 }
+
 .logo-text {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    margin-top: 6px;
 }
+
 #logo-img path {
     fill: var(--fg);
 }
@@ -110,8 +114,20 @@ nav ul li a {
     position: fixed;
     top: 0;
     right: 0;
-    margin: 1.5rem;
+    margin: 1.1rem;
     display: none;
+}
+
+#hamburger::before {
+    content: '';
+    width: calc(100% + 0.4rem);
+    height: calc(100% + 0.4rem);
+    background-color: var(--light-clr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
 }
 
 .line {
@@ -121,6 +137,7 @@ nav ul li a {
     border-radius: 100vmax;
     position: relative;
 }
+
 .line::before {
     content: '';
     width: 0;
@@ -139,39 +156,33 @@ nav ul li a {
     transform: translateX(-100%);
     opacity: 1;
 }
-
 #hamburger.open {
     transform: rotate(90deg);
-    background-color: #fff;
-    outline: 3px solid #fff;
+    background-color: var(--light-clr);
     border-radius: 2px;
 }
-
 #hamburger.open .line::before {
     opacity: 1;
     width: 65%;
 }
-
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
     header {
         justify-content: center;
+        padding: 1rem;
     }
-
-    .logo {
-        margin-right: 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+    #logo-img {
+        width: 3rem;
     }
-
+    .logo-text {
+        display: none;
+    }
     nav {
         position: fixed;
         top: 0;
         left: 100%;
         opacity: 0;
     }
-
     nav ul {
         flex-direction: column;
         gap: 2rem;
@@ -182,12 +193,10 @@ nav ul li a {
         width: 40vw;
         text-align: right;
     }
-
     nav ul li a {
         font-size: clamp(1rem, 3vw, 1.2rem);
         color: var(--light-clr);
     }
-
     #hamburger {
         display: flex;
         z-index: 100;
