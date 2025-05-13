@@ -134,7 +134,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     margin: 1.1rem;
@@ -146,6 +146,7 @@ nav ul li a {
     width: calc(100% + 0.4rem);
     height: calc(100% + 0.4rem);
     background-color: var(--light-clr);
+    background-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -156,7 +157,7 @@ nav ul li a {
 .line {
     width: 100%;
     height: 0.2rem;
-    background-color: var(--dark-clr);
+    background-color: var(--light-clr);
     border-radius: 100vmax;
     position: relative;
 }
@@ -184,6 +185,14 @@ nav ul li a {
     transform: rotate(90deg);
     background-color: var(--light-clr);
     border-radius: 2px;
+}
+
+#hamburger.open::before {
+    background-color: var(--light-clr);
+}
+
+#hamburger.open .line {
+    background-color: var(--dark-clr);
 }
 
 #hamburger.open .line::before {
