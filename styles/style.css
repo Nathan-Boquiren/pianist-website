@@ -37,17 +37,33 @@
 body {
     min-height: 100vh;
     background-color: var(--bg);
+    color: var(--fg);
 }
 
 /* Typography */
 
 p, h1, h2, h3, h4, h5, h6, li, a {
-    color: var(--fg);
+    text-wrap: balance;
+    color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-font);   
 }
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+h3 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+}
+h4 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
 
 p, li, a {
     font-family: var(--secondary-font);
@@ -68,9 +84,16 @@ header {
     align-items: center;
     justify-content: flex-end;
     padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    color: var(--light-clr);
 }
 
 /* Logo */
+
 .logo {
     margin-right: auto;
     cursor: pointer;
@@ -87,7 +110,7 @@ header {
 }
 
 #logo-img path {
-    fill: var(--fg);
+        fill: var(--light-clr);
 }
 
 /* Nav Menu */
@@ -133,7 +156,7 @@ nav ul li a {
 .line {
     width: 100%;
     height: 0.2rem;
-    background-color: var(--fg);
+    background-color: var(--dark-clr);
     border-radius: 100vmax;
     position: relative;
 }
@@ -142,7 +165,7 @@ nav ul li a {
     content: '';
     width: 0;
     height: 0.4rem;
-    background-color: var(--fg);
+    background-color: var(--dark-clr);
     position: absolute;
     left: 0;
     top: 50%;
@@ -156,11 +179,13 @@ nav ul li a {
     transform: translateX(-100%);
     opacity: 1;
 }
+
 #hamburger.open {
     transform: rotate(90deg);
     background-color: var(--light-clr);
     border-radius: 2px;
 }
+
 #hamburger.open .line::before {
     opacity: 1;
     width: 65%;
@@ -188,7 +213,7 @@ nav ul li a {
         gap: 2rem;
         padding: 1.3rem;
         padding-top: 5rem;
-        background-color: var(--primary-clr);
+        background-color: var(--primary-dark);
         height: 100vh;
         width: 40vw;
         text-align: right;
