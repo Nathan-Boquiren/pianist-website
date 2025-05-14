@@ -6,6 +6,7 @@
     --primary-clr: #607d8b;
     --primary-dark: #37474f;
     --primary-light: #90a4ae;
+    --primary-vibrant: #587f93;
     --secondary-clr: #D2b48c;
     --secondary-dark: #bfa074;
     --secondary-light: #F5DEB3;
@@ -82,38 +83,41 @@ ul, ol {
 a.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--light-clr);
+    border: 2px solid var(--primary-light);
     border-radius: 0.5rem;
     background-color: transparent;
-    color: var(--light-clr);
+    color: var(--primary-light);
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
 }
 
-a.btn::after {
+a.btn::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
-    height: 0;
-    border-radius: 0 50% 100% 50%;
-    background-color: transparent;
+    height: 100%;
+    background-color: var(--primary-clr);
     z-index: -1;
 }
 
-a.btn:hover::after {
-    width: 140%;
-    height: 130%;
-    background-color: var(--light-clr);
+a.btn.hover {
+    color: var(--light-clr);
+    border-color: var(--primary-clr);
 }
 
-a.btn:hover {
-    color: var(--dark-clr);
+a.btn.hover::before {
+    width: 100%;
 }
 
+a.btn.leave::before {
+    left: unset;
+    right: 0;
+    width: 0;
+}
 
 /* ========== Header ========== */
 header {
