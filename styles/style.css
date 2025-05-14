@@ -84,7 +84,7 @@ a.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
     border: 2px solid var(--primary-light);
-    border-radius: 0.5rem;
+    border-radius: 6px;
     background-color: transparent;
     color: var(--primary-light);
     font-weight: 600;
@@ -92,7 +92,6 @@ a.btn {
     position: relative;
     overflow: hidden;
 }
-
 a.btn::before {
     content: '';
     position: absolute;
@@ -103,16 +102,14 @@ a.btn::before {
     background-color: var(--primary-clr);
     z-index: -1;
 }
-
 a.btn.hover {
     color: var(--light-clr);
     border-color: var(--primary-clr);
+    text-shadow: 1px 1px 1px var(--primary-dark);
 }
-
 a.btn.hover::before {
     width: 100%;
 }
-
 a.btn.leave::before {
     left: unset;
     right: 0;
@@ -120,6 +117,7 @@ a.btn.leave::before {
 }
 
 /* ========== Header ========== */
+
 header {
     display: flex;
     align-items: center;
@@ -139,17 +137,14 @@ header {
     margin-right: auto;
     cursor: pointer;
 }
-
 #logo-img {
     width: 4rem;
     height: auto;
 }
-
 .logo-text {
     font-size: clamp(1.5rem, 2.5vw, 2.2rem);
     margin-top: 6px;
 }
-
 #logo-img path {
         fill: var(--light-clr);
 }
@@ -160,9 +155,30 @@ nav ul, .logo {
     display: flex;
     gap: 2rem;
 }
-
 nav ul li a {
     text-transform: uppercase;
+}
+
+nav ul li:hover a {
+    color: var(--primary-light);
+}
+
+/* Nav Hover Animation */
+.nav-list-container {
+    position: relative;
+}
+
+.nav-list-container::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 0.2rem);
+    background-color: var(--primary-light);
+    right: 0;
+    height: 0.2rem;
+    border-radius: 100vmax;
+    left: var(--left, 28px);
+    transform: translateX(-50%);
+    width: var(--width, 0);
 }
 
 /* Hamburger Menu */
