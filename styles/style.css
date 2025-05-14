@@ -78,6 +78,43 @@ ul, ol {
     list-style: none;
 }
 
+/* Buttons */
+a.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--light-clr);
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--light-clr);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 0 50% 100% 50%;
+    background-color: transparent;
+    z-index: -1;
+}
+
+a.btn:hover::after {
+    width: 140%;
+    height: 130%;
+    background-color: var(--light-clr);
+}
+
+a.btn:hover {
+    color: var(--dark-clr);
+}
+
+
 /* ========== Header ========== */
 header {
     display: flex;

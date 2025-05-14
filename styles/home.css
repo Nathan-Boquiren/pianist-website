@@ -39,6 +39,10 @@
     font-size: clamp(2rem, 5vw, 4rem);
 }
 
+.hero-content a.btn {
+    margin-top: clamp(1rem, 2vw, 2rem);
+}
+
 /* ========== Responsive Design ========== */
 @media (max-width: 768px) {
     .hero {
