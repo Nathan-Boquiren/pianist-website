@@ -69,10 +69,18 @@
     max-width: 1500px;
     margin: 0 auto;
     padding: 4vw 2rem;
+    position: relative;
 }
 
 .video-column {
     flex: 1.4 1 400px;
+}
+
+.featured-music .vertical-line {
+    align-self: stretch;
+    width: 1px;
+    background-color: var(--primary-light);
+    margin: -0.5rem 0;
 }
 
 .text-column {
@@ -85,7 +93,11 @@
 }
 
 .text-column :is(h3, p) {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.text-column a.btn {
+    margin-right: 0.5rem;
 }
 
 .video-column iframe {
@@ -93,7 +105,11 @@
     height: auto;
     aspect-ratio: 16/9;
     border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+    
+}
+.video-column iframe:hover {
+    scale: 1.01;
 }
 
 @media (max-width: 768px) {
@@ -101,7 +117,9 @@
         flex-direction: column;
         align-items: center;
         padding: 3rem 2rem;
-        height: 80vh;
+    }
+    .featured-music .vertical-line {
+        display: none;
     }
     .video-column, .text-column {
         flex: auto;
@@ -118,3 +136,5 @@
         order: 2;
     }
 }
+
+/* ========== About Preview Section ========== */
