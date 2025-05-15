@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 /* ========== CSS RESET ========== */
 
 :root {
@@ -91,6 +90,7 @@ a.btn {
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
+    outline: none;
 }
 a.btn::before {
     content: '';
@@ -102,12 +102,13 @@ a.btn::before {
     background-color: var(--primary-clr);
     z-index: -1;
 }
-a.btn.hover {
+a.btn.hover, a.btn:focus {
     color: var(--light-clr);
     border-color: var(--primary-clr);
     text-shadow: 1px 1px 1px var(--primary-dark);
+    
 }
-a.btn.hover::before {
+a.btn.hover::before, a.btn:focus::before {
     width: 100%;
 }
 a.btn.leave::before {
@@ -287,6 +288,9 @@ nav ul li:hover a {
     nav ul li a {
         font-size: clamp(1rem, 3vw, 1.2rem);
         color: var(--light-clr);
+    }
+    a.btn::before {
+        display: none;
     }
     #hamburger {
         display: flex;

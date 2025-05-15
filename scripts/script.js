@@ -5,6 +5,7 @@ cl(
 );
 
 // ========== DOM Elements ==========
+
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("nav-menu");
 const navContainer = document.querySelector(".nav-list-container");
@@ -12,6 +13,7 @@ const navItems = document.querySelectorAll(".nav-list-item");
 const btns = document.querySelectorAll(".btn");
 
 // ========== Variables ==========
+
 let menuOpen = false;
 
 // ========== Nav Hamburger Menu ==========
