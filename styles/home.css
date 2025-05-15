@@ -4,7 +4,7 @@
     background-position: center right 25%;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -37,6 +37,8 @@
 
 .hero-content a.btn {
     margin-top: clamp(1rem, 2vw, 2rem);
+    border-color: var(--primary-light);
+    color: var(--primary-light);
 }
 
 /* ========== Responsive Design ========== */
@@ -63,31 +65,43 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 2rem;
+    gap: clamp(2rem, 2vw, 3rem);
     max-width: 1500px;
     margin: 0 auto;
-    padding: 1rem;
-
+    padding: 4vw 2rem;
 }
 
 .video-column {
-    flex: 1 1 400px;
+    flex: 1.4 1 400px;
 }
 
 .text-column {
     flex: 1 1 300px;
 }
+
+.text-column h2 {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.text-column :is(h3, p) {
+    margin-bottom: 1rem;
+}
+
 .video-column iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
     border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
     .featured-music {
         flex-direction: column;
         align-items: center;
+        padding: 3rem 2rem;
+        height: 80vh;
     }
     .video-column, .text-column {
         flex: auto;
@@ -96,6 +110,9 @@
     .text-column {
         text-align: center;
         order: 1;
+    }
+    .text-column :is(h2, h3, p) {
+        margin-bottom: 1rem;
     }
     .video-column {
         order: 2;

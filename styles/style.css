@@ -3,7 +3,7 @@
 
 :root {
     --primary-clr: #607d8b;
-    --primary-dark: #37474f;
+    --primary-dark: #455a64;
     --primary-light: #90a4ae;
     --primary-vibrant: #587f93;
     --secondary-clr: #D2b48c;
@@ -70,6 +70,10 @@ p, li, a {
     font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
+p {
+    line-height: 1.5;
+}
+
 a {
     text-decoration: none;
 }
@@ -82,10 +86,10 @@ ul, ol {
 a.btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-light);
+    border: 2px solid var(--primary-clr);
     border-radius: 6px;
     background-color: transparent;
-    color: var(--primary-light);
+    color: var(--primary-clr);
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
@@ -103,8 +107,8 @@ a.btn::before {
     z-index: -1;
 }
 a.btn.hover, a.btn:focus {
-    color: var(--light-clr);
-    border-color: var(--primary-clr);
+    color: var(--light-clr) !important;
+    border-color: var(--primary-clr) !important;
     text-shadow: 1px 1px 1px var(--primary-dark);
     
 }
@@ -116,7 +120,10 @@ a.btn.leave::before {
     right: 0;
     width: 0;
 }
-
+a.btn:active {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark) !important;
+}
 /* ========== Header ========== */
 
 header {
@@ -185,6 +192,7 @@ nav ul li:hover a {
 /* Hamburger Menu */
 
 #hamburger {
+    --line-clr: var(--light-clr);
     cursor: pointer;
     width: 2rem;
     aspect-ratio: 1;
@@ -203,7 +211,6 @@ nav ul li:hover a {
     content: '';
     width: calc(100% + 0.4rem);
     height: calc(100% + 0.4rem);
-    background-color: var(--light-clr);
     background-color: transparent;
     position: absolute;
     top: 50%;
@@ -215,7 +222,7 @@ nav ul li:hover a {
 .line {
     width: 100%;
     height: 0.2rem;
-    background-color: var(--light-clr);
+    background-color: var(--line-clr);
     border-radius: 100vmax;
     position: relative;
 }
@@ -295,5 +302,11 @@ nav ul li:hover a {
     #hamburger {
         display: flex;
         z-index: 100;
+        position: fixed;
     }
+}
+
+
+section {
+    min-height: 100vh;
 }
