@@ -140,7 +140,7 @@
 
 .links {
     text-align: center;
-    background-color: var(--primary-light);
+    background-color: var(--secondary-dark);
     padding: clamp(2rem, 2vw, 4rem);
 }
 

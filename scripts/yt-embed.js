@@ -1,8 +1,5 @@
 const ytEmbed = document.querySelector(".yt-embed");
 
-const API_KEY = "AIzaSyBNb2RQM8QUI5ccvhoc747r0m0fGabihSY";
-const CHANNEL_ID = "UC9okbTCREkUg96NqD3XlzDg";
-
 fetch(
   `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=1`
 )
