@@ -114,7 +114,6 @@ a.btn.hover, a.btn:focus {
     color: var(--light-clr) !important;
     border-color: var(--primary-clr) !important;
     text-shadow: 1px 1px 1px var(--primary-dark);
-    
 }
 a.btn.hover::before, a.btn:focus::before {
     width: 100%;
@@ -128,6 +127,28 @@ a.btn:active {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark) !important;
 }
+
+/* Tan Buttons */
+
+a.tan-btn {
+    border-color: var(--secondary-dark);
+    color: var(--secondary-dark);
+}
+a.tan-btn::before {
+    background-color: var(--secondary-dark);
+}
+a.btn.tan-btn.hover, a.btn.tan-btn:focus {
+    color: var(--light-clr) !important;
+    border-color: var(--secondary-dark) !important;
+    --tan-dark: color-mix(in srgb, var(--secondary-dark) 65%, black 35%);
+    text-shadow: 1px 1px 1px var(--tan-dark);
+}
+a.btn.tan-btn:active {
+    --tan-dark: color-mix(in srgb, var(--secondary-dark) 70%, black 30%);
+    background-color: var(--tan-dark);
+    border-color: var(--tan-dark) !important;
+}
+
 /* ========== Header ========== */
 
 header {
