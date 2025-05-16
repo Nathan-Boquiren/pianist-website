@@ -35,7 +35,8 @@ const observer = new IntersectionObserver(
       const currentSection = visibleSections[0].target;
       const computedStyle = getComputedStyle(currentSection);
       const bgImage = computedStyle.backgroundImage;
-      const color = bgImage === "none" ? "var(--dark-clr)" : "var(--light-clr)";
+      const color =
+        bgImage === "none" ? "var(--primary-clr)" : "var(--light-clr)";
       hamburger.style.setProperty("--line-clr", color);
     }
   },
