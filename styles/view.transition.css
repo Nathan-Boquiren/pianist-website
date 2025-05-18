@@ -1,0 +1,11 @@
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 500ms;
+}
+
+.about-img {
+    view-transition-name: about-img;
+}
