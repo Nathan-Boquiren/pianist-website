@@ -335,24 +335,27 @@ nav ul li:hover a {
 /* ========== Footer ========== */
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 1rem;
-    background-color: var(--primary-dark);
+    padding: 1.5rem;
+    background-image: url(https://wallpapercave.com/wp/lKoY8Bu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    --overlay-base: color-mix(in srgb, var(--primary-dark) 50%, black 50%);
+    --overlay-transparent: color-mix(in srgb, var(--overlay-base) 60%, transparent 40%);
+    border-image: fill 1 linear-gradient(var(--overlay-transparent), var(--overlay-transparent));
+    text-align: center;
     color: var(--light-clr);
+
 }
 
-footer > * {
-    flex: 1;
-    text-align: center;
+footer > *:not(:last-child) {
+    margin-bottom: 1.5rem;
 }
 
 .ftr-logo {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -362,23 +365,30 @@ footer > * {
     fill: var(--light-clr);
 }
 
-footer .tagline {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-style: italic;
-}
-
 .ftr-logo h1 {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
     margin-top: 0.4rem;
 }
 
-footer p {
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+.ftr-links ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
+.ftr-links ul li a svg {
+    width: auto;
+    height: 1.5rem;
+    fill: var(--light-clr);
+
+}
+
+.ftr-links ul li:hover a svg {
+    fill: var(--secondary-clr);
+    scale: 1.1;
+}
+
+footer p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
