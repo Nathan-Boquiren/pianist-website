@@ -160,9 +160,11 @@
 .links {
     text-align: center; 
     padding-inline: clamp(2rem, 2vw, 4rem);
-    padding-bottom: clamp(3rem, 3.5vw, 5rem);
+    padding-block: clamp(3rem, 3.5vw, 5rem);
+    margin-top: clamp(1rem, 2.5vw, 3rem);
     position: relative;
     background-color: var(--secondary-dark);
+    clip-path: url(#wave-clip);
 }
 
 .links :is(h2, p) {
@@ -238,23 +240,6 @@
     scale: 1.05;
 }
 
-/* ===== SVG Wave Section Transitions ===== */
-
-.svg-transition {
-    width: 100%;
-    height: clamp(2rem, 5vw, 6rem);
-    margin-bottom: -0.5rem;
-}
-
-.svg-transition.before {
-    fill: var(--secondary-dark);
-}
-
-.svg-transition.after {
-    fill: var(--light-clr);
-    background-color: var(--secondary-dark);
-}
-
 @media (max-width: 768px) {
     .link-container {
         max-width: 500px;
@@ -268,8 +253,21 @@
     display: flex;
     flex-wrap: wrap;
     gap: clamp(2rem, 2vw, 3rem);
-    padding: 4vw clamp(2rem, 8vw, 12rem);
+    padding: 5vw clamp(2rem, 8vw, 12rem);
+    margin-top: -2rem;
     position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/imgs/sheet-music-bg-3.svg");
+    background-size: 100%;
+    background-position: left -5rem top -15rem;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.4;
 }
 
 .img-column {
@@ -279,10 +277,37 @@
     justify-content: center;
 }
 
-.about-img {
+.img-column a {
     width: clamp(15rem, 60%, 30rem);
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.img-column a::before {
+    content: '';
+    position: absolute;
+    inset: -0.5rem;
+    bottom: -0.15rem;
+    background-color: var(--primary-clr);
+    clip-path: url(#circleClip);
+}
+
+.about-img {
+    width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: top;
     clip-path: url(#circleClip);
+}
+
+.img-column a:hover .about-img {
+    scale: 1.04;
+}
+
+@media (max-width: 768px) {
+    .about::before {
+        background-size: 60rem;
+        background-position: center top -10rem;
+        opacity: 0.3;
+    }
 }

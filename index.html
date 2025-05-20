@@ -82,11 +82,14 @@
             </svg>
 
         </section>
-
-        <svg class="svg-transition before" viewBox="0 0 1200 120" preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,120 L0,60 C150,20 300,100 450,60 S750,20 900,60 S1050,100 1200,60 L1200,120 Z"></path>
+        <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+            <clipPath id="wave-clip" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M 0 0 C 0.12 0.02, 0.18 0.06, 0.28 0.04 C 0.38 0.03, 0.42 0.01, 0.5 0.02 C 0.58 0.03, 0.62 0.07, 0.72 0.06 C 0.82 0.05, 0.88 0.01, 1 0 L 1 1 C 0.88 0.98, 0.82 0.94, 0.72 0.96 C 0.62 0.97, 0.58 0.99, 0.5 0.98 C 0.42 0.97, 0.38 0.93, 0.28 0.94 C 0.18 0.95, 0.12 0.99, 0 1 Z" />
+            </clipPath>
         </svg>
+
+
 
         <section class="links">
             <h2>Social Links</h2>
@@ -179,24 +182,21 @@
             </div>
         </section>
 
-        <svg class="svg-transition after" viewBox="0 0 1200 120" preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M1200,0 L1200,60 C1050,100 900,20 750,60 S450,100 300,60 S150,20 0,60 L0,0 Z"
-                transform="scale(-1, -1) translate(-1200, -120)"></path>
-        </svg>
-
-        <svg style="height: 0;">
-            <defs>
-                <clipPath id="circleClip" clipPathUnits="objectBoundingBox">
-                    <path
-                        d="M 1,0.5 C 1,0.9343180218433668 0.9343180218433668,1 0.5,1 C 0.06568197815663332,1 0,0.9343180218433668 0,0.5 C 0,0.06568197815663332 0.06568197815663332,0 0.5,0 C 0.9343180218433668,0 1,0.06568197815663332 1,0.5 Z" />
-                </clipPath>
-            </defs>
-        </svg>
-
         <section class="about">
+            <svg style="height: 0; width: 0;">
+                <defs>
+                    <clipPath id="circleClip" clipPathUnits="objectBoundingBox">
+                        <path
+                            d="M 1,0.5 C 1,0.9343180218433668 0.9343180218433668,1 0.5,1 C 0.06568197815663332,1 0,0.9343180218433668 0,0.5 C 0,0.06568197815663332 0.06568197815663332,0 0.5,0 C 0.9343180218433668,0 1,0.06568197815663332 1,0.5 Z" />
+                    </clipPath>
+                </defs>
+            </svg>
+
             <div class="img-column">
-                <img class="about-img" src="assets/imgs/test-substitue-about.png" alt="Portrait of Nathan J. Boquiren">
+                <a href="pages/about.html">
+                    <img class="about-img" src="assets/imgs/test-substitue-about.png"
+                        alt="Portrait of Nathan J. Boquiren">
+                </a>
             </div>
             <div class="text-column">
                 <h2>About Me</h2>
