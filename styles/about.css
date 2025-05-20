@@ -1,0 +1,6 @@
+.about-img {
+    width: clamp(15rem, 60%, 30rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+}

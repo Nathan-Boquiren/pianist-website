@@ -20,3 +20,11 @@ btns.forEach((btn) => {
     }, 250);
   });
 });
+
+// ========== Footer Link Icon Hover Colors ==========
+
+document.querySelectorAll(".ftr-links ul li").forEach((link) => {
+  const svg = link.querySelector("a svg");
+  const hoverClr = link.getAttribute("data-clr");
+  svg.style.setProperty("--hover-clr", hoverClr);
+});

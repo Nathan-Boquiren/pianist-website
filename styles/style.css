@@ -340,9 +340,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    --overlay-base: color-mix(in srgb, var(--primary-dark) 50%, black 50%);
-    --overlay-transparent: color-mix(in srgb, var(--overlay-base) 60%, transparent 40%);
-    border-image: fill 1 linear-gradient(var(--overlay-transparent), var(--overlay-transparent));
+    border-image: fill 1 linear-gradient(rgb(0 0 0 / 0.4), rgb(0 0 0 / 0.8));
     text-align: center;
     color: var(--light-clr);
 
@@ -352,40 +350,29 @@ footer > *:not(:last-child) {
     margin-bottom: 1.5rem;
 }
 
-.ftr-logo {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.ftr-logo svg {
-    width: 3rem;
-    height: auto;
-    fill: var(--light-clr);
-}
-
-.ftr-logo h1 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    margin-top: 0.4rem;
+.ftr-tagline {
+    font-style: italic;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 .ftr-links ul {
     display: flex;
-    gap: 1rem;
+    gap: clamp(1rem, 2vw, 2rem);
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .ftr-links ul li a svg {
     width: auto;
-    height: 1.5rem;
+    height: clamp(1.2rem, 2vw, 1.5rem);
     fill: var(--light-clr);
 
 }
 
 .ftr-links ul li:hover a svg {
-    fill: var(--secondary-clr);
+    --hover-clr: var(--primary-light);
+    fill: var(--hover-clr);
     scale: 1.1;
 }
 
